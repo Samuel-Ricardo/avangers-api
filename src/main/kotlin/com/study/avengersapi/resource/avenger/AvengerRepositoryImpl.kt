@@ -20,5 +20,5 @@ class AvengerRepositoryImpl(
     override fun create(avenger: Avenger): Avenger =
         repository.save(AvengerEntity.from(avenger)).toAvenger()
 
-
+    override fun delete(id: Long) = repository.deleteById(id)
 }
