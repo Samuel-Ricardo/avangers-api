@@ -11,5 +11,11 @@ import org.springframework.stereotype.Repository
 class AvengerRepositoryImpl(
     @Autowired private val repository: AvengerEntityRepository
 ): AvengersRepository {
+
     override fun getDetail(id: Long) = repository.findByIdOrNull(id)?.toAvenger();
+
+    override fun getAvengers(): List<Avenger> =
+        repository.findAll().map { it.toAvenger() }
+
+
 }
