@@ -1,5 +1,6 @@
 package com.study.avengersapi.resource.avenger
 
+import com.study.avengersapi.domain.avenger.Avenger
 import net.bytebuddy.dynamic.loading.InjectionClassLoader.Strategy
 import javax.persistence.*
 
@@ -18,4 +19,6 @@ data class AvengerEntity(
     val description: String?,
 
     val history: String?
-)
+){
+    fun toAvenger() = Avenger(id, nick, person, description, history)
+}
