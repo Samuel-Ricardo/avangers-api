@@ -17,5 +17,8 @@ class AvengerRepositoryImpl(
     override fun getAvengers(): List<Avenger> =
         repository.findAll().map { it.toAvenger() }
 
+    override fun create(avenger: Avenger): Avenger =
+        repository.save(AvengerEntity.from(avenger)).toAvenger()
+
 
 }
