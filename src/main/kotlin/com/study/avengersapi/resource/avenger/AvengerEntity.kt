@@ -21,4 +21,14 @@ data class AvengerEntity(
     val history: String?
 ){
     fun toAvenger() = Avenger(id, nick, person, description, history)
+
+    companion object{
+        fun from(avenger: Avenger) = AvengerEntity(
+            id = avenger.id,
+            nick = avenger.nick,
+            person = avenger.person,
+            description = avenger.description,
+            history = avenger.history
+        )
+    }
 }
