@@ -28,7 +28,7 @@ class AvengerResource(
 
 
     @PostMapping
-    fun createAvengers (@Valid @RequestBody request: AvengerRequest){
+    fun createAvenger (@Valid @RequestBody request: AvengerRequest){
         request.toAvenger()
             .run { repository.create(this) }
             .let {
