@@ -25,3 +25,9 @@ services:
       - postgres-avengers
     networks:
       - postgres-compose-network
+
+  volumes:
+    pdb12:
+  networks:
+    postgres-compose-network:
+      driver: bridge
