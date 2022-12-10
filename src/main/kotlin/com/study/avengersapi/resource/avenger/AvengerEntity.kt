@@ -17,7 +17,6 @@ data class AvengerEntity(
     val person: String,
 
     val description: String?,
-
     val history: String?
 ){
     fun toAvenger() = Avenger(id, nick, person, description, history)

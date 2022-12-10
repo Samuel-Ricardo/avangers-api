@@ -5,7 +5,6 @@ import com.study.avengersapi.domain.avenger.AvengersRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
-import org.springframework.stereotype.Repository
 
 @Component
 class AvengerRepositoryImpl(
